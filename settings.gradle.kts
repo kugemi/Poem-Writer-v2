@@ -23,3 +23,4 @@ rootProject.name = "Poem Writer"
 include(":app")
 include(":core:rhyme-api")
 include(":core:database")
+include(":features:rhymes")
