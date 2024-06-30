@@ -14,7 +14,7 @@ interface PoemsDao {
     suspend fun getPoems(): List<PoemDBO>
 
     @Query("SELECT * FROM POEMS")
-    suspend fun observePoems(): Flow<List<PoemDBO>>
+    fun observePoems(): Flow<List<PoemDBO>>
 
     @Query("SELECT EXISTS(SELECT * FROM POEMS WHERE id = :id)")
     suspend fun isPoemIsExist(id : Int): Boolean
