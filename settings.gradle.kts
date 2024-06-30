@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Poem Writer"
 include(":app")
-include(":rhymeapi")
+include(":core:rhyme-api")
+include(":core:database")
