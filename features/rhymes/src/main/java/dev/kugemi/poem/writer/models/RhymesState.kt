@@ -8,5 +8,5 @@ sealed class RhymesState(rhymes: List<RhymeUI>?) {
 
     class Error : RhymesState(null)
 
-    class Success(rhymes: List<RhymeUI>) : RhymesState(rhymes)
+    class Success(val rhymes: List<RhymeUI>) : RhymesState(rhymes)
 }

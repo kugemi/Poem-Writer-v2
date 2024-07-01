@@ -13,6 +13,8 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.serialization.json)
-    implementation(libs.retrofit2.kotlinx.serialization.converter)
+    implementation(libs.retrofit.converter.kotlinx.serialization)
     implementation(libs.retrofit.adapters.result)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
 }

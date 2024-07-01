@@ -11,4 +11,5 @@ java {
 dependencies {
     implementation(project(":core:rhyme-api"))
     implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.javax.inject)
 }

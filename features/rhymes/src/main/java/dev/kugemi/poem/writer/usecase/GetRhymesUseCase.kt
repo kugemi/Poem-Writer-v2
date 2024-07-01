@@ -16,7 +16,7 @@ class GetRhymesUseCase @Inject constructor(
     operator fun invoke(word: String, language: Language): Flow<RequestResult<List<RhymeUI>>> {
         return repository.getRhymes(word, language).map { requestResult ->
             requestResult.map { rhymes ->
-                rhymes.map { it.toRhymeUI() }
+                rhymes.sortedByDescending { it.score }.map { it.toRhymeUI() }
             }
         }
     }

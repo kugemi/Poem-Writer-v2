@@ -17,10 +17,10 @@ internal fun RhymeDTO.toRhyme(): Rhyme {
 
 internal fun Language.toLanguageSerializable(): LanguageSerializable {
     return when (this) {
-        Language.EN -> LanguageSerializable.EN
-        Language.DE -> LanguageSerializable.DE
-        Language.FR -> LanguageSerializable.FR
-        Language.ES -> LanguageSerializable.ES
-        Language.RU -> LanguageSerializable.RU
+        Language.EN -> LanguageSerializable.en
+        Language.DE -> LanguageSerializable.de
+        Language.FR -> LanguageSerializable.fr
+        Language.ES -> LanguageSerializable.es
+        Language.RU -> LanguageSerializable.ru
     }
 }

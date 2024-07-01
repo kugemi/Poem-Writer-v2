@@ -5,18 +5,19 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 enum class LanguageSerializable {
+    // TODO: return uppercase 
     @SerialName("en")
-    EN,
+    en,
 
     @SerialName("de")
-    DE,
+    de,
 
     @SerialName("es")
-    ES,
+    es,
 
     @SerialName("ru")
-    RU,
+    ru,
 
     @SerialName("fr")
-    FR,
+    fr,
 }

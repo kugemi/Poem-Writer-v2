@@ -65,6 +65,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
 
     implementation(project(":core:rhyme-api"))
+    implementation(project(":features:rhymes"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
