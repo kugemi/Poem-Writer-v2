@@ -2,7 +2,7 @@ package dev.kugemi.rhymesapi
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.skydoves.retrofit.adapters.result.ResultCallAdapterFactory
-import dev.kugemi.rhymesapi.models.Language
+import dev.kugemi.rhymesapi.models.LanguageSerializable
 import dev.kugemi.rhymesapi.models.RhymeDTO
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType
@@ -21,11 +21,11 @@ interface RhymesApi {
     fun getRhymes(
         @Query("function") function : String,
         @Query("word") word : String,
-        @Query("lang") language : Language
+        @Query("lang") language : LanguageSerializable
     ): Result<List<RhymeDTO>>
 }
 
-fun RhymesApi(baseUrl: String, okHttpClient: OkHttpClient? = null, json: Json): RhymesApi {
+fun RhymesApi(baseUrl: String, okHttpClient: OkHttpClient? = null, json: Json = Json): RhymesApi {
     return retrofit(baseUrl, okHttpClient, json).create()
 }
 
